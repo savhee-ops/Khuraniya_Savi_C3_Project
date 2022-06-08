@@ -49,6 +49,31 @@ class RestaurantTest {
 
 
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>MENU<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+    @Test
+    public void item_added_to_menu_should_return_the_price_greater_than_zero() {
+        addRestaurantDetails();
+
+        restaurant.addToMenu("Sizzling brownie",319);
+
+        int price = restaurant.getSelectedItemPrice();
+
+        assertEquals(707, price);
+    }
+
+    @Test
+    public void item_not_added_to_menu_should_return_zero() {
+        LocalTime openingTime = LocalTime.parse("10:30:00");
+        LocalTime closingTime = LocalTime.parse("22:00:00");
+        restaurant =new Restaurant("Amelie's cafe","Chennai",openingTime,closingTime);
+
+
+        int cost  = restaurant.getSelectedItemPrice();
+
+
+        assertEquals(0, cost);
+    }
+
     @Test
     public void adding_item_to_menu_should_increase_menu_size_by_1(){
         addRestaurantDetails();

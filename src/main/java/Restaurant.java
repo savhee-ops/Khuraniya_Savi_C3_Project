@@ -3,7 +3,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Restaurant {
+public class    Restaurant {
     private String name;
     private String location;
     public LocalTime openingTime;
@@ -49,6 +49,15 @@ public class Restaurant {
 
         menu.remove(itemToBeRemoved);
     }
+
+    public int getSelectedItemPrice() {
+        int amt = 0;
+        for(Item item: menu) {
+            amt += item.getPrice();
+        }
+        return amt;
+    }
+
     public void displayDetails(){
         System.out.println("Restaurant:"+ name + "\n"
                 +"Location:"+ location + "\n"

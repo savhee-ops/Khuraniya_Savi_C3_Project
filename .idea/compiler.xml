@@ -9,6 +9,7 @@
         <module name="Restaurant_project -Student version" />
         <module name="Restaurant_project" />
         <module name="C3_Project_Savi" />
+        <module name="Khuraniya_Savi_C3_Project" />
       </profile>
     </annotationProcessing>
   </component>

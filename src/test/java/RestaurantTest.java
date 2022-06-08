@@ -31,6 +31,7 @@ class RestaurantTest {
         assertTrue(result);
     }
 
+    //Failed test case
     @Test
     public void is_restaurant_open_should_return_false_if_time_is_outside_opening_and_closing_time(){
         LocalTime openingTime = LocalTime.parse("10:30:00");
